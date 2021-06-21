@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:on_muhasebe/core/utils/entities_model_repositories.dart';
+import 'package:on_muhasebe/core/widgets/page_root.dart';
 
 class PageRouter {
   static Route<dynamic>? generateRoute(RouteSettings settings) {
-    return null;
+    return MaterialPageRoute(builder: (_) => PageRoot());
   }
 }
