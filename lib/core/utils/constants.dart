@@ -21,3 +21,17 @@ const String CHANGE_PASSWORD_ROUTE = '/change_password';
 
 // routes
 const String ROOT_PAGE_ROUTE = '/';
+const String HOME_PAGE_ROUTE = '/anaSayfa';
+const String URUN_HIZMET_PAGE_ROUTE = '/urunHizmet';
+
+const String SATISLAR_MUSTERILER_PAGE_ROUTE = '/satislar/musteriler';
+const String SATISLAR_FATURALAR_PAGE_ROUTE = '/satislar/faturalar';
+const String SATISLAR_TAHSILATLAR_PAGE_ROUTE = '/satislar/tahsilar';
+const String ALISLAR_TEDARIKCILER_PAGE_ROUTE = '/alislar/tedarikciler';
+const String ALISLAR_FATURALAR_PAGE_ROUTE = '/alislar/faturalar';
+const String ALISLAR_ODEMELER_PAGE_ROUTE = '/alislar/odemeler';
+const String BANKALAR_HESAPLAR_PAGE_ROUTE = '/bankalar/hesaplar';
+const String BANKALAR_TRANSFERLER_PAGE_ROUTE = '/bankalar/transferler';
+const String BANKALAR_ISLEMLER_PAGE_ROUTE = '/bankalar/islemler';
+const String AYARLAR_PAGE_ROUTE = '/ayarlar';
+const String RAPORLAR_PAGE_ROUTE = '/raporlar';
