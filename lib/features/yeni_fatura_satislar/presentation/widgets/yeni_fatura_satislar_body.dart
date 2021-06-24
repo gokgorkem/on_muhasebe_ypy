@@ -89,6 +89,33 @@ class _YeniFaturaSatislarBodyState extends State<YeniFaturaSatislarBody> {
                   ),
                 ),
                 SizedBox(height: 10),
+                Expanded(
+                  flex: 1,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text("Vade Tarihi : "),
+                      TextButton(
+                        onPressed: () {
+                          DatePicker.showDatePicker(
+                            context,
+                            showTitleActions: true,
+                            minTime: DateTime(DateTime.now().year - 5),
+                            maxTime: DateTime(DateTime.now().year + 5),
+                            onConfirm: (date) {
+                              setState(() {
+                                _date = date;
+                              });
+                            },
+                            currentTime: DateTime.now(),
+                            locale: LocaleType.tr,
+                          );
+                        },
+                        child: Text(formatDate.format(_date)),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             )
           ],
