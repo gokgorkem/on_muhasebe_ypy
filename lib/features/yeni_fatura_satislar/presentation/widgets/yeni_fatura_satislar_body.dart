@@ -19,7 +19,26 @@ class _YeniFaturaSatislarBodyState extends State<YeniFaturaSatislarBody> {
   Widget build(BuildContext context) {
     return Container(
       child: Form(
-        child: ListView(),
+        child: ListView(
+          children: [
+            Row(
+              children: [
+                Expanded(
+                  flex: 1,
+                  //TODO changed to serch field
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      hintText: "Tedarikçi ",
+                      labelText: "Tedarikçi  Seçiniz",
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 10),
+          ],
+        ),
       ),
     );
   }
