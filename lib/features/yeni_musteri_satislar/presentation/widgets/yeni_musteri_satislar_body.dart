@@ -35,6 +35,17 @@ class _YeniMusteriSatislarBodyState extends State<YeniMusteriSatislarBody> {
                     ),
                   ),
                 ),
+                SizedBox(width: 10),
+                Expanded(
+                  flex: 1,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      hintText: "Müşteri Eposta",
+                      labelText: "Müşteri Eposta Giriniz",
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
               ],
             )
           ],
