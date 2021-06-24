@@ -124,6 +124,31 @@ class _YeniTahsilatSatislarBodyState extends State<YeniTahsilatSatislarBody> {
                 ),
               ),
               SizedBox(width: 10),
+              Expanded(
+                child: Container(
+                  child: DropdownButton(
+                    hint: Text("Kategoriler"),
+                    items: [
+                      DropdownMenuItem(
+                        child: Text("Alış"),
+                        value: 1,
+                        onTap: () => null,
+                      ),
+                      DropdownMenuItem(
+                        child: Text("Satış"),
+                        value: 2,
+                        onTap: () => null,
+                      ),
+                      DropdownMenuItem(
+                        child: Text("Diğer"),
+                        value: 3,
+                        onTap: () => null,
+                      ),
+                    ],
+                    onChanged: (value) => null,
+                  ),
+                ),
+              ),
             ],
           )
         ],
