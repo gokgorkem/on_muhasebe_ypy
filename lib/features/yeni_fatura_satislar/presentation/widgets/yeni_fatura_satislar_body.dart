@@ -117,6 +117,32 @@ class _YeniFaturaSatislarBodyState extends State<YeniFaturaSatislarBody> {
                   ),
                 ),
               ],
+            ),
+            SizedBox(height: 10),
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(),
+                    child: DropdownButton(
+                      hint: Text("Fatura Kategoıri"),
+                      items: [
+                        DropdownMenuItem(
+                          child: Text("Alış"),
+                          value: 1,
+                          onTap: () => null,
+                        ),
+                        DropdownMenuItem(
+                          child: Text("Diğer"),
+                          value: 2,
+                          onTap: () => null,
+                        ),
+                      ],
+                      onChanged: (value) => null,
+                    ),
+                  ),
+                ),
+              ],
             )
           ],
         ),
