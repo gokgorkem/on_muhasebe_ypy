@@ -48,6 +48,10 @@ dependencies:
   json_annotation: ^3.0.1
   # Gerekli Komponentler
   searchfield: ^0.5.2
+  flutter_datetime_picker: ^1.5.1
+  intl: ^0.17.0
+  syncfusion_flutter_charts: ^19.1.69+1
+  fl_chart: ^0.36.2
 
 
 dev_dependencies:
