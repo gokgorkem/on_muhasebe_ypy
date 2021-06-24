@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:on_muhasebe/core/utils/model_base.dart';
 
@@ -19,6 +18,80 @@ class _YeniHesapBankalarBodyState extends State<YeniHesapBankalarBody> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      child: Form(
+        key: _formKey,
+        child: ListView(
+          children: <Widget>[
+            Row(
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      hintText: "Hesap Adı ",
+                      labelText: "Hesap Adı Giriniz",
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Expanded(
+                  flex: 1,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      hintText: "IBAN NO",
+                      labelText: "IBAN NO Giriniz",
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Row(
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      hintText: "Açılış Bakiyesi",
+                      labelText: "Açılış Bakiyesi Giriniz",
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Expanded(
+                  child: Container(
+                    child: DropdownButton(
+                      hint: Text("Para Birimi Seçiniz"),
+                      items: [
+                        DropdownMenuItem(
+                          child: Text("Türk Lirası"),
+                          value: 1,
+                          onTap: () => null,
+                        ),
+                        DropdownMenuItem(
+                          child: Text("Dolar"),
+                          value: 2,
+                          onTap: () => null,
+                        ),
+                      ],
+                      onChanged: (value) => null,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
