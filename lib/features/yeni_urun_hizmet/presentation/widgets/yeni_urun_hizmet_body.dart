@@ -15,8 +15,6 @@ class _YeniUrunHizmetBodyState extends State<YeniUrunHizmetBody> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 300,
-      height: 100,
       child: Form(
         key: _formKey,
         child: ListView(

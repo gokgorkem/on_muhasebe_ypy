@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:on_muhasebe/core/utils/constants.dart';
-import 'package:on_muhasebe/core/widgets/page_root.dart';
 import 'package:on_muhasebe/features/alis_fatura/presentation/pages/alis_fatura_page.dart';
 import 'package:on_muhasebe/features/alis_odeme/presentation/pages/alis_odeme_page.dart';
 import 'package:on_muhasebe/features/alis_tedarikci/presentation/pages/alis_tedarikci_page.dart';
@@ -14,6 +13,7 @@ import 'package:on_muhasebe/features/satis_fatura/presentation/pages/satis_fatur
 import 'package:on_muhasebe/features/satis_musteri/presentation/pages/satis_musteri_page.dart';
 import 'package:on_muhasebe/features/satis_tahsilat/presentation/pages/satis_tahsilat_page.dart';
 import 'package:on_muhasebe/features/urun_hizmet/presentation/pages/urun_hizmet_page.dart';
+import 'package:on_muhasebe/features/yeni_odeme_alislar/presentation/pages/yeni_odeme_alislar_page.dart';
 
 class PageRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -45,7 +45,7 @@ class PageRouter {
       case RAPORLAR_PAGE_ROUTE:
         return MaterialPageRoute(builder: (_) => RaporlarPage());
       default:
-        return MaterialPageRoute(builder: (_) => PageRoot());
+        return MaterialPageRoute(builder: (_) => YeniOdemeAlislarPage());
     }
   }
 }
