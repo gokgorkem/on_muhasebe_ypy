@@ -28,9 +28,30 @@ class _YeniFaturaSatislarBodyState extends State<YeniFaturaSatislarBody> {
                   //TODO changed to serch field
                   child: TextFormField(
                     decoration: InputDecoration(
-                      hintText: "Tedarikçi ",
-                      labelText: "Tedarikçi  Seçiniz",
+                      hintText: "Müşteri ",
+                      labelText: "Müşteri  Seçiniz",
                       border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 10),
+                Expanded(
+                  child: Container(
+                    child: DropdownButton(
+                      hint: Text("Para Birimi Seçiniz"),
+                      items: [
+                        DropdownMenuItem(
+                          child: Text("Türk Lirası"),
+                          value: 1,
+                          onTap: () => null,
+                        ),
+                        DropdownMenuItem(
+                          child: Text("Dolar"),
+                          value: 2,
+                          onTap: () => null,
+                        ),
+                      ],
+                      onChanged: (value) => null,
                     ),
                   ),
                 ),
