@@ -61,8 +61,29 @@ class _YeniMusteriSatislarBodyState extends State<YeniMusteriSatislarBody> {
                     ),
                   ),
                 ),
+                SizedBox(width: 10),
+                Expanded(
+                  child: Container(
+                    child: DropdownButton(
+                      hint: Text("Para Birimi Seçiniz"),
+                      items: [
+                        DropdownMenuItem(
+                          child: Text("Türk Lirası"),
+                          value: 1,
+                          onTap: () => null,
+                        ),
+                        DropdownMenuItem(
+                          child: Text("Dolar"),
+                          value: 2,
+                          onTap: () => null,
+                        ),
+                      ],
+                      onChanged: (value) => null,
+                    ),
+                  ),
+                ),
               ],
-            )
+            ),
           ],
         ),
       ),
