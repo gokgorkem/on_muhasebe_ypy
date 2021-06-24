@@ -87,6 +87,28 @@ class _YeniTahsilatSatislarBodyState extends State<YeniTahsilatSatislarBody> {
                   ),
                 ),
               ),
+              SizedBox(width: 10),
+              Expanded(
+                // TODO changed to Search filed
+                child: Container(
+                  child: DropdownButton(
+                    hint: Text("Müşteriler"),
+                    items: [
+                      DropdownMenuItem(
+                        child: Text("Ali"),
+                        value: 1,
+                        onTap: () => null,
+                      ),
+                      DropdownMenuItem(
+                        child: Text("Veli"),
+                        value: 2,
+                        onTap: () => null,
+                      ),
+                    ],
+                    onChanged: (value) => null,
+                  ),
+                ),
+              ),
             ],
           )
         ],
