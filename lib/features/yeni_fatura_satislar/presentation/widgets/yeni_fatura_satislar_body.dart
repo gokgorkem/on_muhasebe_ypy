@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:on_muhasebe/core/utils/model_base.dart';
 
@@ -58,6 +59,38 @@ class _YeniFaturaSatislarBodyState extends State<YeniFaturaSatislarBody> {
               ],
             ),
             SizedBox(height: 10),
+            Row(
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text("Fatura Tarihi : "),
+                      TextButton(
+                        onPressed: () {
+                          DatePicker.showDatePicker(
+                            context,
+                            showTitleActions: true,
+                            minTime: DateTime(DateTime.now().year - 5),
+                            maxTime: DateTime(DateTime.now().year + 5),
+                            onConfirm: (date) {
+                              setState(() {
+                                _date = date;
+                              });
+                            },
+                            currentTime: DateTime.now(),
+                            locale: LocaleType.tr,
+                          );
+                        },
+                        child: Text(formatDate.format(_date)),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 10),
+              ],
+            )
           ],
         ),
       ),
