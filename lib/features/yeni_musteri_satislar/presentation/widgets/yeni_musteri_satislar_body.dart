@@ -47,6 +47,21 @@ class _YeniMusteriSatislarBodyState extends State<YeniMusteriSatislarBody> {
                   ),
                 ),
               ],
+            ),
+            SizedBox(height: 10),
+            Row(
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      hintText: "Vergi No",
+                      labelText: "Vergi No Giriniz",
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
+              ],
             )
           ],
         ),
