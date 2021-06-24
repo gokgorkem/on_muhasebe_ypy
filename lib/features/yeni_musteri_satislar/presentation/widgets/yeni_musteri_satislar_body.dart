@@ -84,6 +84,22 @@ class _YeniMusteriSatislarBodyState extends State<YeniMusteriSatislarBody> {
                 ),
               ],
             ),
+            SizedBox(height: 10),
+            Row(
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      hintText: "Telefon Numarası",
+                      labelText: "Telefon Numarası Giriniz",
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
+                SizedBox(width: 10),
+              ],
+            )
           ],
         ),
       ),
