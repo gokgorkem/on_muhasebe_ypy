@@ -21,7 +21,24 @@ class _YeniMusteriSatislarBodyState extends State<YeniMusteriSatislarBody> {
     return Container(
       child: Form(
         key: _formKey,
-        child: ListView(),
+        child: ListView(
+          children: [
+            Row(
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      hintText: "Müşteri İsim",
+                      labelText: "Müşteri İsimi Giriniz",
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
