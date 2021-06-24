@@ -150,6 +150,31 @@ class _YeniTahsilatSatislarBodyState extends State<YeniTahsilatSatislarBody> {
                 ),
               ),
             ],
+          ),
+          SizedBox(height: 10),
+          Row(
+            children: [
+              Expanded(
+                child: Container(
+                  child: DropdownButton(
+                    hint: Text("Tahsilat Yöntemi"),
+                    items: [
+                      DropdownMenuItem(
+                        child: Text("Nakit"),
+                        value: 1,
+                        onTap: () => null,
+                      ),
+                      DropdownMenuItem(
+                        child: Text("Kredi kartı"),
+                        value: 2,
+                        onTap: () => null,
+                      ),
+                    ],
+                    onChanged: (value) => null,
+                  ),
+                ),
+              ),
+            ],
           )
         ],
       ),
