@@ -91,7 +91,7 @@ class _CustomMenuState extends State<CustomMenu> {
                 // Update the state of the app.
                 // ...
                 _selectedListUpdate(1);
-                Navigator.pushNamed(context, URUN_HIZMET_PAGE_ROUTE);
+                Navigator.of(context).pushNamed(URUN_HIZMET_PAGE_ROUTE);
               },
             ),
             ExpansionTile(

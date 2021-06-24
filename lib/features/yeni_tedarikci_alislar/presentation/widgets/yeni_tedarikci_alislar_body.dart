@@ -32,9 +32,7 @@ class _YeniTedarikciAlislarBodyState extends State<YeniTedarikciAlislarBody> {
                     ),
                   ),
                 ),
-                SizedBox(
-                  width: 10,
-                ),
+                SizedBox(width: 10),
                 Expanded(
                   flex: 1,
                   child: TextFormField(
@@ -47,9 +45,7 @@ class _YeniTedarikciAlislarBodyState extends State<YeniTedarikciAlislarBody> {
                 ),
               ],
             ),
-            SizedBox(
-              height: 10,
-            ),
+            SizedBox(height: 10),
             Row(
               children: [
                 Expanded(
@@ -62,9 +58,7 @@ class _YeniTedarikciAlislarBodyState extends State<YeniTedarikciAlislarBody> {
                     ),
                   ),
                 ),
-                SizedBox(
-                  width: 10,
-                ),
+                SizedBox(width: 10),
                 Expanded(
                   child: Container(
                     child: DropdownButton(
@@ -87,9 +81,7 @@ class _YeniTedarikciAlislarBodyState extends State<YeniTedarikciAlislarBody> {
                 ),
               ],
             ),
-            SizedBox(
-              height: 10,
-            ),
+            SizedBox(height: 10),
             Row(
               children: [
                 Expanded(
@@ -101,9 +93,7 @@ class _YeniTedarikciAlislarBodyState extends State<YeniTedarikciAlislarBody> {
                     ),
                   ),
                 ),
-                SizedBox(
-                  width: 10,
-                ),
+                SizedBox(width: 10),
                 Expanded(
                   child: TextFormField(
                     decoration: InputDecoration(
