@@ -44,9 +44,10 @@ class _CustomAppBarState extends State<CustomAppBar> {
             onPressed: () => buildShowDialog(context),
           ),
           SizedBox(width: 20),
-          IconButton(
-            icon: Icon(Icons.hearing_sharp),
-            onPressed: () => null,
+          PopupMenuButton(
+            child: Icon(Icons.hearing_sharp),
+            itemBuilder: (context) => [PopupMenuItem(child: Text("asd"))],
+            offset: Offset(50, 50),
           ),
           SizedBox(width: 20),
           Text("Kullanıcı Adı"),

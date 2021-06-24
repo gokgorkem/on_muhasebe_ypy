@@ -18,7 +18,6 @@ class _PageRootState extends State<PageRoot> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       key: _scaffoldKey,
       body: Row(
         children: <Widget>[

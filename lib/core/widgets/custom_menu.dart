@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:on_muhasebe/core/utils/constants.dart';
 import 'package:on_muhasebe/core/utils/theme.dart';
 
 class CustomMenu extends StatefulWidget {
   const CustomMenu({Key? key}) : super(key: key);
-
+  static late List<bool> listSelected =
+      List.generate(13, (index) => index != 0 ? false : true);
+  static bool drawerOpen = true;
   @override
   _CustomMenuState createState() => _CustomMenuState();
 }
 
 class _CustomMenuState extends State<CustomMenu> {
-  bool drawerOpen = true;
+  static bool drawerOpen = CustomMenu.drawerOpen;
   late double _genislik;
   @override
   void initState() {
@@ -66,15 +69,19 @@ class _CustomMenuState extends State<CustomMenu> {
               ),
             ),
             ListTile(
+              selected: CustomMenu.listSelected[0],
               leading: Tooltip(
                   message: "Ana Ekran", child: Icon(Icons.home_rounded)),
               title: Text((drawerOpen && _genislik > 199) ? 'Ana Ekran' : " "),
               onTap: () {
                 // Update the state of the app.
                 // ...
+                _selectedListUpdate(0);
+                Navigator.pushNamed(context, HOME_PAGE_ROUTE);
               },
             ),
             ListTile(
+              selected: CustomMenu.listSelected[1],
               leading: Tooltip(
                   message: "Ürün/Hizmet",
                   child: Icon(Icons.production_quantity_limits)),
@@ -83,15 +90,23 @@ class _CustomMenuState extends State<CustomMenu> {
               onTap: () {
                 // Update the state of the app.
                 // ...
+                _selectedListUpdate(1);
+                Navigator.pushNamed(context, URUN_HIZMET_PAGE_ROUTE);
               },
             ),
             ExpansionTile(
+              initiallyExpanded: CustomMenu.listSelected[2] ||
+                  CustomMenu.listSelected[3] ||
+                  CustomMenu.listSelected[4],
               leading: Tooltip(
                   message: "Satışlar", child: Icon(Icons.point_of_sale)),
-              trailing: Icon(null),
+              trailing: (drawerOpen && _genislik > 199)
+                  ? Icon(Icons.keyboard_arrow_down_rounded)
+                  : Icon(null),
               title: drawerOpen ? Text("Satışlar") : Text(""),
               children: [
                 ListTile(
+                  selected: CustomMenu.listSelected[2],
                   leading: Tooltip(
                       message: "Müşteriler",
                       child: Icon(Icons.supervised_user_circle_outlined)),
@@ -100,9 +115,13 @@ class _CustomMenuState extends State<CustomMenu> {
                   onTap: () {
                     // Update the state of the app.
                     // ...
+                    _selectedListUpdate(2);
+                    Navigator.pushNamed(
+                        context, SATISLAR_MUSTERILER_PAGE_ROUTE);
                   },
                 ),
                 ListTile(
+                  selected: CustomMenu.listSelected[3],
                   leading: Tooltip(
                       message: "Faturalar",
                       child: Icon(Icons.document_scanner_outlined)),
@@ -111,9 +130,12 @@ class _CustomMenuState extends State<CustomMenu> {
                   onTap: () {
                     // Update the state of the app.
                     // ...
+                    _selectedListUpdate(3);
+                    Navigator.pushNamed(context, SATISLAR_FATURALAR_PAGE_ROUTE);
                   },
                 ),
                 ListTile(
+                  selected: CustomMenu.listSelected[4],
                   leading: Tooltip(
                       message: "Tahsilatlar",
                       child: Icon(Icons.payments_outlined)),
@@ -122,16 +144,25 @@ class _CustomMenuState extends State<CustomMenu> {
                   onTap: () {
                     // Update the state of the app.
                     // ...
+                    _selectedListUpdate(4);
+                    Navigator.pushNamed(
+                        context, SATISLAR_TAHSILATLAR_PAGE_ROUTE);
                   },
                 ),
               ],
             ),
             ExpansionTile(
+              initiallyExpanded: CustomMenu.listSelected[5] ||
+                  CustomMenu.listSelected[6] ||
+                  CustomMenu.listSelected[7],
               leading: Tooltip(message: "Alışlar", child: Icon(Icons.payment)),
-              trailing: Icon(null),
+              trailing: (drawerOpen && _genislik > 199)
+                  ? Icon(Icons.keyboard_arrow_down_rounded)
+                  : Icon(null),
               title: drawerOpen ? Text("Alışlar") : Text(""),
               children: [
                 ListTile(
+                  selected: CustomMenu.listSelected[5],
                   leading: Tooltip(
                       message: "Tedarikçiler",
                       child: Icon(Icons.supervised_user_circle_rounded)),
@@ -141,9 +172,13 @@ class _CustomMenuState extends State<CustomMenu> {
                   onTap: () {
                     // Update the state of the app.
                     // ...
+                    _selectedListUpdate(5);
+                    Navigator.pushNamed(
+                        context, ALISLAR_TEDARIKCILER_PAGE_ROUTE);
                   },
                 ),
                 ListTile(
+                  selected: CustomMenu.listSelected[6],
                   leading: Tooltip(
                       message: "Faturalar",
                       child: Icon(Icons.document_scanner_rounded)),
@@ -152,9 +187,12 @@ class _CustomMenuState extends State<CustomMenu> {
                   onTap: () {
                     // Update the state of the app.
                     // ...
+                    _selectedListUpdate(6);
+                    Navigator.pushNamed(context, ALISLAR_FATURALAR_PAGE_ROUTE);
                   },
                 ),
                 ListTile(
+                  selected: CustomMenu.listSelected[7],
                   leading: Tooltip(
                       message: "Ödemeler", child: Icon(Icons.payments_rounded)),
                   title: Text(
@@ -162,18 +200,26 @@ class _CustomMenuState extends State<CustomMenu> {
                   onTap: () {
                     // Update the state of the app.
                     // ...
+                    _selectedListUpdate(7);
+                    Navigator.pushNamed(context, ALISLAR_ODEMELER_PAGE_ROUTE);
                   },
                 ),
               ],
             ),
             ExpansionTile(
+              initiallyExpanded: CustomMenu.listSelected[8] ||
+                  CustomMenu.listSelected[9] ||
+                  CustomMenu.listSelected[10],
               leading: Tooltip(
                   message: "Bankalar",
                   child: Icon(Icons.account_balance_sharp)),
-              trailing: Icon(null),
+              trailing: (drawerOpen && _genislik > 199)
+                  ? Icon(Icons.keyboard_arrow_down_rounded)
+                  : Icon(null),
               title: drawerOpen ? Text("Bankalar") : Text(""),
               children: [
                 ListTile(
+                  selected: CustomMenu.listSelected[8],
                   leading: Tooltip(
                       message: "Hesaplar",
                       child: Icon(Icons.credit_card_rounded)),
@@ -182,9 +228,12 @@ class _CustomMenuState extends State<CustomMenu> {
                   onTap: () {
                     // Update the state of the app.
                     // ...
+                    _selectedListUpdate(8);
+                    Navigator.pushNamed(context, BANKALAR_HESAPLAR_PAGE_ROUTE);
                   },
                 ),
                 ListTile(
+                  selected: CustomMenu.listSelected[9],
                   leading: Tooltip(
                       message: "Transferler",
                       child: Icon(Icons.sync_alt_rounded)),
@@ -193,9 +242,13 @@ class _CustomMenuState extends State<CustomMenu> {
                   onTap: () {
                     // Update the state of the app.
                     // ...
+                    _selectedListUpdate(9);
+                    Navigator.pushNamed(
+                        context, BANKALAR_TRANSFERLER_PAGE_ROUTE);
                   },
                 ),
                 ListTile(
+                  selected: CustomMenu.listSelected[10],
                   leading: Tooltip(
                       message: "İşlemler",
                       child: Icon(Icons.transfer_within_a_station_rounded)),
@@ -204,30 +257,44 @@ class _CustomMenuState extends State<CustomMenu> {
                   onTap: () {
                     // Update the state of the app.
                     // ...
+                    _selectedListUpdate(10);
+                    Navigator.pushNamed(context, BANKALAR_ISLEMLER_PAGE_ROUTE);
                   },
                 ),
               ],
             ),
             ListTile(
+              selected: CustomMenu.listSelected[11],
               leading:
                   Tooltip(message: "Raporlar", child: Icon(Icons.add_chart)),
               title: Text((drawerOpen && _genislik > 199) ? 'Raporlar' : " "),
               onTap: () {
                 // Update the state of the app.
                 // ...
+                _selectedListUpdate(11);
+                Navigator.pushNamed(context, RAPORLAR_PAGE_ROUTE);
               },
             ),
             ListTile(
+              selected: CustomMenu.listSelected[12],
               leading: Tooltip(message: "Ayarlar", child: Icon(Icons.settings)),
               title: Text((drawerOpen && _genislik > 199) ? 'Ayarlar' : " "),
               onTap: () {
                 // Update the state of the app.
                 // ...
+                _selectedListUpdate(12);
+                Navigator.pushNamed(context, AYARLAR_PAGE_ROUTE);
               },
             ),
           ],
         ),
       ),
     );
+  }
+
+  _selectedListUpdate(int index) {
+    setState(() {
+      for (int i = 0; i < 13; i++) CustomMenu.listSelected[i] = (i == index);
+    });
   }
 }
