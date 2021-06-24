@@ -142,6 +142,16 @@ class _YeniFaturaSatislarBodyState extends State<YeniFaturaSatislarBody> {
                     ),
                   ),
                 ),
+                SizedBox(height: 10),
+                Expanded(
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      hintText: "Açıklama",
+                      labelText: "Açıklama Giriniz",
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
               ],
             )
           ],
