@@ -110,6 +110,21 @@ class _YeniTahsilatSatislarBodyState extends State<YeniTahsilatSatislarBody> {
                 ),
               ),
             ],
+          ),
+          SizedBox(height: 10),
+          Row(
+            children: [
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    hintText: "Açıklama",
+                    labelText: "Açıklama Giriniz",
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+              ),
+              SizedBox(width: 10),
+            ],
           )
         ],
       ),
