@@ -98,6 +98,15 @@ class _YeniMusteriSatislarBodyState extends State<YeniMusteriSatislarBody> {
                   ),
                 ),
                 SizedBox(width: 10),
+                Expanded(
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      hintText: "Müşteri Adres",
+                      labelText: "Müşteri Adresi Giriniz",
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
               ],
             )
           ],
