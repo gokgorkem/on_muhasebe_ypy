@@ -52,6 +52,16 @@ class _YeniTahsilatSatislarBodyState extends State<YeniTahsilatSatislarBody> {
                 ),
               ),
               SizedBox(width: 10),
+              Expanded(
+                flex: 1,
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    hintText: "Tahsilat Tutarı",
+                    labelText: "Tahsilat Tutarı Giriniz",
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+              ),
             ],
           )
         ],
