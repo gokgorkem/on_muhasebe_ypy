@@ -28,6 +28,7 @@ class _YeniTahsilatSatislarBodyState extends State<YeniTahsilatSatislarBody> {
               Expanded(
                 flex: 1,
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Text("Tahsilat Tarihi :"),
                     TextButton(
