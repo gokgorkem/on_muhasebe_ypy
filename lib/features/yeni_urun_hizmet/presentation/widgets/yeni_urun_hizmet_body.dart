@@ -149,13 +149,17 @@ class _YeniUrunHizmetBodyState extends State<YeniUrunHizmetBody> {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                TextButton(
-                    onPressed: () => Navigator.of(context).pushNamed(URUN_HIZMET_PAGE_ROUTE), child: Text("İptal")),
+                Expanded(
+                  child: TextButton(
+                      onPressed: () => Navigator.of(context).pushNamed(URUN_HIZMET_PAGE_ROUTE), child: Text("İptal")),
+                ),
                 SizedBox(width: 10),
-                TextButton(
-                    onPressed: () {
-                      Navigator.of(context).pushNamed(URUN_HIZMET_PAGE_ROUTE);
-                    }, child: Text("Kaydet")),
+                Expanded(
+                  child: TextButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed(URUN_HIZMET_PAGE_ROUTE);
+                      }, child: Text("Kaydet")),
+                ),
               ],
             )
           ],
