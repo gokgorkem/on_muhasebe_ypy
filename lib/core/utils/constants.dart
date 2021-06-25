@@ -23,7 +23,6 @@ const String CHANGE_PASSWORD_ROUTE = '/change_password';
 const String ROOT_PAGE_ROUTE = '/';
 const String HOME_PAGE_ROUTE = '/anaSayfa';
 const String URUN_HIZMET_PAGE_ROUTE = '/urunHizmet';
-
 const String SATISLAR_MUSTERILER_PAGE_ROUTE = '/satislar/musteriler';
 const String SATISLAR_FATURALAR_PAGE_ROUTE = '/satislar/faturalar';
 const String SATISLAR_TAHSILATLAR_PAGE_ROUTE = '/satislar/tahsilar';
@@ -35,3 +34,14 @@ const String BANKALAR_TRANSFERLER_PAGE_ROUTE = '/bankalar/transferler';
 const String BANKALAR_ISLEMLER_PAGE_ROUTE = '/bankalar/islemler';
 const String AYARLAR_PAGE_ROUTE = '/ayarlar';
 const String RAPORLAR_PAGE_ROUTE = '/raporlar';
+
+
+const String YENI_URUN_HIZMET_PAGE_ROUTE = '/urunHizmet/yeniUrunHizmet';
+const String SATISLAR_YENI_MUSTERI_PAGE_ROUTE = '/satislar/musteriler/yeniMusteri';
+const String SATISLAR_YENI_FATURA_PAGE_ROUTE = '/satislar/faturalar/yeniFatura';
+const String SATISLAR_YENI_TAHSILAT_PAGE_ROUTE = '/satislar/tahsilar/yeniTahsilat';
+const String ALISLAR_YENI_TEDARIKCI_PAGE_ROUTE = '/alislar/tedarikciler/yeniTedarikci';
+const String ALISLAR_YENI_FATURA_PAGE_ROUTE = '/alislar/faturalar/yeni/Fatura';
+const String ALISLAR_YENI_ODEME_PAGE_ROUTE = '/alislar/odemeler/yeniOdeme';
+const String BANKALAR_YENI_HESAP_PAGE_ROUTE = '/bankalar/hesaplar/yeniHesap';
+const String BANKALAR_YENI_TRANSFER_PAGE_ROUTE = '/bankalar/transferler/yeniTransfer';
