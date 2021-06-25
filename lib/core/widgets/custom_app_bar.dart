@@ -147,7 +147,9 @@ class _CustomAppBarState extends State<CustomAppBar> {
                         child: Column(
                           children: [
                             IconButton(
-                                onPressed: () => null,
+                                onPressed: () => Navigator.of(context)
+                                    .pushNamed(
+                                        SATISLAR_YENI_TAHSILAT_PAGE_ROUTE),
                                 icon: Icon(Icons.payments_outlined)),
                             Text("Yeni Tahsilat"),
                           ],
