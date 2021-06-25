@@ -158,6 +158,8 @@ class _YeniFaturaSatislarBodyState extends State<YeniFaturaSatislarBody> {
             Row(
               children: [
                 TextButton(onPressed: () => null, child: Text("İptal")),
+                SizedBox(width: 10),
+                TextButton(onPressed: () => null, child: Text("Kaydet")),
               ],
             )
           ],
