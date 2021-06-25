@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
+import 'package:on_muhasebe/core/utils/constants.dart';
 import 'package:on_muhasebe/core/utils/entities_model_repositories.dart';
 import 'package:on_muhasebe/core/utils/theme.dart';
 
@@ -25,7 +26,9 @@ class _SatislarTahsilatlarBodyState extends State<SatislarTahsilatlarBody> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   TextButton(
-                      onPressed: () => null, child: Text("Yeni Tahsilat"))
+                      onPressed: () => Navigator.of(context)
+                          .pushNamed(SATISLAR_YENI_TAHSILAT_PAGE_ROUTE),
+                      child: Text("Yeni Tahsilat"))
                 ],
               ),
             )),
