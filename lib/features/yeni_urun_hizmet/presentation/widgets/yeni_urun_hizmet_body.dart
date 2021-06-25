@@ -106,7 +106,7 @@ class _YeniUrunHizmetBodyState extends State<YeniUrunHizmetBody> {
               ],
             ),
             SizedBox(
-              height: 10,
+              height: 10
             ),
             Row(
               children: [
@@ -141,10 +141,22 @@ class _YeniUrunHizmetBodyState extends State<YeniUrunHizmetBody> {
                   onChanged: (value) => null,
                 ))
               ],
+            ),
+            SizedBox(
+                height: 10
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                TextButton(
+                    onPressed: _onPressedIptal(), child: Text("İptal"))
+              ],
             )
           ],
         ),
       ),
     );
   }
+
+  _onPressedIptal() {}
 }
