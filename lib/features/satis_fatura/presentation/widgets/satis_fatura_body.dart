@@ -15,6 +15,21 @@ class SatislarFaturaBody extends StatefulWidget {
 class _SatislarFaturaBodyState extends State<SatislarFaturaBody> {
   @override
   Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Expanded(
+            child: Container(
+          child: TextButton(
+            onPressed: () => null,
+            child: Text("Yeni Fatura"),
+          ),
+        )),
+        Expanded(child: buildListViewSatisFatura()),
+      ],
+    );
+  }
+
+  ListView buildListViewSatisFatura() {
     return ListView.separated(
       separatorBuilder: (context, index) => Divider(),
       itemCount: (widget.body == null || widget.headers == null)
