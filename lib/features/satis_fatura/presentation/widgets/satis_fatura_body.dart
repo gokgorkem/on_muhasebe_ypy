@@ -18,13 +18,20 @@ class _SatislarFaturaBodyState extends State<SatislarFaturaBody> {
     return Column(
       children: [
         Expanded(
+            flex: 1,
             child: Container(
-          child: TextButton(
-            onPressed: () => null,
-            child: Text("Yeni Fatura"),
-          ),
-        )),
-        Expanded(child: buildListViewSatisFatura()),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  TextButton(
+                    onPressed: () => null,
+                    child: Text("Yeni Fatura"),
+                  ),
+                ],
+              ),
+            )),
+        Expanded(flex: 8, child: buildListViewSatisFatura()),
+        Expanded(flex: 1, child: Container())
       ],
     );
   }
