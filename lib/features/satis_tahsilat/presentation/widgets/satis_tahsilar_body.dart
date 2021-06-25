@@ -16,6 +16,25 @@ class SatislarTahsilatlarBody extends StatefulWidget {
 class _SatislarTahsilatlarBodyState extends State<SatislarTahsilatlarBody> {
   @override
   Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Expanded(
+            flex: 1,
+            child: Container(
+              child: Row(
+                children: [
+                  TextButton(
+                      onPressed: () => null, child: Text("Yeni Tahsilat"))
+                ],
+              ),
+            )),
+        Expanded(flex: 8, child: buildListViewSatisTahsilatlar()),
+        Expanded(flex: 1, child: Container())
+      ],
+    );
+  }
+
+  ListView buildListViewSatisTahsilatlar() {
     return ListView.separated(
       separatorBuilder: (context, index) => Divider(),
       itemCount: (widget.body == null || widget.headers == null)
