@@ -181,21 +181,21 @@ class _YeniTahsilatSatislarBodyState extends State<YeniTahsilatSatislarBody> {
           SizedBox(height: 10),
           Row(
             children: [
-              TextButton(onPressed: _onPressedIptal(), child: Text("İptal")),
+              Expanded(
+                  child: TextButton(
+                      onPressed: () => Navigator.of(context)
+                          .pushNamed(SATISLAR_TAHSILATLAR_PAGE_ROUTE),
+                      child: Text("İptal"))),
               SizedBox(width: 10),
-              TextButton(onPressed: _onPressedKaydet(), child: Text("Kaydet")),
+              Expanded(
+                  child: TextButton(
+                      onPressed: () => Navigator.of(context)
+                          .pushNamed(SATISLAR_TAHSILATLAR_PAGE_ROUTE),
+                      child: Text("Kaydet"))),
             ],
           )
         ],
       ),
     );
-  }
-
-  _onPressedIptal() {
-    Navigator.of(context).pushNamed(SATISLAR_TAHSILATLAR_PAGE_ROUTE);
-  }
-
-  _onPressedKaydet() {
-    Navigator.of(context).pushNamed(SATISLAR_TAHSILATLAR_PAGE_ROUTE);
   }
 }
