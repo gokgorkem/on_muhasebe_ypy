@@ -104,24 +104,25 @@ class _YeniTedarikciAlislarBodyState extends State<YeniTedarikciAlislarBody> {
                     ),
                   ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    TextButton(
-                        onPressed: () => Navigator.of(context)
-                            .pushNamed(ALISLAR_TEDARIKCILER_PAGE_ROUTE),
-                        child: Text("İptal")),
-                    SizedBox(width: 10),
-                    TextButton(
-                        onPressed: () {
-                          Navigator.of(context)
-                              .pushNamed(ALISLAR_TEDARIKCILER_PAGE_ROUTE);
-                        },
-                        child: Text("Kaydet")),
-                  ],
-                )
               ],
             ),
+            SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                TextButton(
+                    onPressed: () => Navigator.of(context)
+                        .pushNamed(ALISLAR_TEDARIKCILER_PAGE_ROUTE),
+                    child: Text("İptal")),
+                SizedBox(width: 10),
+                TextButton(
+                    onPressed: () {
+                      Navigator.of(context)
+                          .pushNamed(ALISLAR_TEDARIKCILER_PAGE_ROUTE);
+                    },
+                    child: Text("Kaydet")),
+              ],
+            )
           ],
         ),
       ),
