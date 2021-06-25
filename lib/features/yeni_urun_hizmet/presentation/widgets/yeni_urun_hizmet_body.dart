@@ -149,7 +149,10 @@ class _YeniUrunHizmetBodyState extends State<YeniUrunHizmetBody> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 TextButton(
-                    onPressed: _onPressedIptal(), child: Text("İptal"))
+                    onPressed: _onPressedIptal(), child: Text("İptal")),
+                SizedBox(width: 10),
+                TextButton(
+                    onPressed: _onPressedKaydet(), child: Text("Kaydet")),
               ],
             )
           ],
@@ -159,4 +162,6 @@ class _YeniUrunHizmetBodyState extends State<YeniUrunHizmetBody> {
   }
 
   _onPressedIptal() {}
+
+  _onPressedKaydet() {}
 }
