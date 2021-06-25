@@ -17,7 +17,12 @@ class _AlislarTedarikciBodyState extends State<AlislarTedarikciBody> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Expanded(flex: 1,child: Container(child: TextButton(onPressed: () => null,child: Text("Yeni Tedarikci"),),)),
+        Expanded(flex: 1,child: Container(child: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            TextButton(onPressed: () => null,child: Text("Yeni Tedarikci"),),
+          ],
+        ),)),
         Expanded(flex: 8,child: _buildListViewAlisTedarikci()),
         Expanded(flex: 1,child: Container())
       ],
