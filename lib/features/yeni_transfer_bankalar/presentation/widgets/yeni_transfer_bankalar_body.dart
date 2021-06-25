@@ -166,11 +166,13 @@ class _YeniTransferBankalarBodyState extends State<YeniTransferBankalarBody> {
             ),
             SizedBox(height: 10,),
             Row(children: [
-              TextButton(onPressed: () => Navigator.of(context).pushNamed(BANKALAR_HESAPLAR_PAGE_ROUTE), child: Text("iptal")),
+              Expanded(child: TextButton(onPressed: () => Navigator.of(context).pushNamed(BANKALAR_HESAPLAR_PAGE_ROUTE), child: Text("iptal"))),
               SizedBox(width: 10,),
-              TextButton(onPressed: () {
-                Navigator.of(context).pushNamed(BANKALAR_HESAPLAR_PAGE_ROUTE);
-              }, child: Text("Kaydet")),
+              Expanded(
+                child: TextButton(onPressed: () {
+                  Navigator.of(context).pushNamed(BANKALAR_HESAPLAR_PAGE_ROUTE);
+                }, child: Text("Kaydet")),
+              ),
 
             ],)
           ],
