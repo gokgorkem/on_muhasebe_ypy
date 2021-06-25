@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
+import 'package:on_muhasebe/core/utils/constants.dart';
 import 'package:on_muhasebe/core/utils/entities_model_repositories.dart';
 import 'package:on_muhasebe/core/utils/theme.dart';
 
@@ -18,7 +19,7 @@ class _BankaTransferBodyState extends State<BankaTransferBody> {
     return Column(
       children: [
         Expanded(flex: 1,child: Container(child: Row(mainAxisAlignment: MainAxisAlignment.end,children: [
-          TextButton(onPressed: () => null,child: Text("Yeni Transfer"),)
+          TextButton(onPressed: () => Navigator.of(context).pushNamed(BANKALAR_YENI_TRANSFER_PAGE_ROUTE),child: Text("Yeni Transfer"),)
         ],),)),
         Expanded(flex: 8,child: _buildListViewBankaTransfer()),
         Expanded(flex: 1,child: Container())
