@@ -4,7 +4,7 @@ class EntitiesModelRepositories {
   List<EntitiesModel> urunHizmetler = List.generate(
       50,
       (index) => EntitiesModel(properties: [
-            "isim $index",
+            "Ali$index",
             "kategori $index",
             "satisFiyati $index",
             "alis $index"

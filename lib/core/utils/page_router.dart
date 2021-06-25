@@ -65,7 +65,7 @@ class PageRouter {
       case SATISLAR_YENI_FATURA_PAGE_ROUTE:
         return MaterialPageRoute(builder: (_) => YeniFaturaSatislarPage());
       case SATISLAR_YENI_TAHSILAT_PAGE_ROUTE:
-        return MaterialPageRoute(builder: (_) => YeniFaturaSatislarPage());
+        return MaterialPageRoute(builder: (_) => YeniTahsilatSatislarPage());
       case BANKALAR_YENI_HESAP_PAGE_ROUTE:
         return MaterialPageRoute(builder: (_) => YeniHesapBankalarPage());
       case BANKALAR_YENI_TRANSFER_PAGE_ROUTE:
