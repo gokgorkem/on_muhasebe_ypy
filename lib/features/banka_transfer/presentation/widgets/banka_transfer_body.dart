@@ -18,7 +18,7 @@ class _BankaTransferBodyState extends State<BankaTransferBody> {
     return Column(
       children: [
         Expanded(flex: 1,child: Container(child: Row(mainAxisAlignment: MainAxisAlignment.end,children: [
-          Expanded(child: TextButton(onPressed: () => null,child: Text("Yeni Transfer"),))
+          TextButton(onPressed: () => null,child: Text("Yeni Transfer"),)
         ],),)),
         Expanded(flex: 8,child: _buildListViewBankaTransfer()),
         Expanded(flex: 1,child: Container())
