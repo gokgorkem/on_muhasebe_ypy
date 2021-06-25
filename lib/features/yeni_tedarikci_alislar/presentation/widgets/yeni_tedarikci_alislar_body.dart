@@ -108,10 +108,16 @@ class _YeniTedarikciAlislarBodyState extends State<YeniTedarikciAlislarBody> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     TextButton(
-                        onPressed: _onPressedIptal(), child: Text("İptal")),
+                        onPressed: () => Navigator.of(context)
+                            .pushNamed(ALISLAR_TEDARIKCILER_PAGE_ROUTE),
+                        child: Text("İptal")),
                     SizedBox(width: 10),
                     TextButton(
-                        onPressed: _onPressedKaydet(), child: Text("Kaydet")),
+                        onPressed: () {
+                          Navigator.of(context)
+                              .pushNamed(ALISLAR_TEDARIKCILER_PAGE_ROUTE);
+                        },
+                        child: Text("Kaydet")),
                   ],
                 )
               ],
@@ -120,13 +126,5 @@ class _YeniTedarikciAlislarBodyState extends State<YeniTedarikciAlislarBody> {
         ),
       ),
     );
-  }
-
-  _onPressedIptal() {
-    Navigator.of(context).pushNamed(ALISLAR_TEDARIKCILER_PAGE_ROUTE);
-  }
-
-  _onPressedKaydet() {
-    Navigator.of(context).pushNamed(ALISLAR_TEDARIKCILER_PAGE_ROUTE);
   }
 }
