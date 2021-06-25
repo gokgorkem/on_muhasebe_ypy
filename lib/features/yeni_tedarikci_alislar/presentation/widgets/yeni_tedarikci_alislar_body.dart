@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:on_muhasebe/core/utils/constants.dart';
 import 'package:on_muhasebe/core/utils/model_base.dart';
 
 class YeniTedarikciAlislarBody extends StatefulWidget {
@@ -121,7 +122,11 @@ class _YeniTedarikciAlislarBodyState extends State<YeniTedarikciAlislarBody> {
     );
   }
 
-  _onPressedIptal() {}
+  _onPressedIptal() {
+    Navigator.of(context).pushNamed(ALISLAR_TEDARIKCILER_PAGE_ROUTE);
+  }
 
-  _onPressedKaydet() {}
+  _onPressedKaydet() {
+    Navigator.of(context).pushNamed(ALISLAR_TEDARIKCILER_PAGE_ROUTE);
+  }
 }
