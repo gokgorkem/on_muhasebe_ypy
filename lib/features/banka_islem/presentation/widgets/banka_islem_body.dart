@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
+import 'package:on_muhasebe/core/utils/constants.dart';
 import 'package:on_muhasebe/core/utils/entities_model_repositories.dart';
 import 'package:on_muhasebe/core/utils/theme.dart';
 
@@ -23,8 +24,8 @@ class _BankaIslemBodyState extends State<BankaIslemBody> {
             Expanded(flex: 1,
               child: Row(
                 children: [
-                  Expanded(flex: 1, child: TextButton(onPressed: () => null,child: Text("Gelir Ekle"),)),
-                  Expanded(flex: 1, child: TextButton(onPressed: () => null,child: Text("Gider Ekle"),)),
+                  Expanded(flex: 1, child: TextButton(onPressed: () => Navigator.of(context).pushNamed(SATISLAR_YENI_TAHSILAT_PAGE_ROUTE),child: Text("Gelir Ekle"),)),
+                  Expanded(flex: 1, child: TextButton(onPressed: () => Navigator.of(context).pushNamed(ALISLAR_YENI_ODEME_PAGE_ROUTE),child: Text("Gider Ekle"),)),
                 ],
               ),
             ),
