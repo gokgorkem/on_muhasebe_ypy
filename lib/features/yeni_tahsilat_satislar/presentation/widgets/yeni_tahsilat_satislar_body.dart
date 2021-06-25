@@ -181,6 +181,8 @@ class _YeniTahsilatSatislarBodyState extends State<YeniTahsilatSatislarBody> {
           Row(
             children: [
               TextButton(onPressed: _onPressedIptal(), child: Text("İptal")),
+              SizedBox(width: 10),
+              TextButton(onPressed: _onPressedKaydet(), child: Text("Kaydet")),
             ],
           )
         ],
@@ -189,4 +191,6 @@ class _YeniTahsilatSatislarBodyState extends State<YeniTahsilatSatislarBody> {
   }
 
   _onPressedIptal() {}
+
+  _onPressedKaydet() {}
 }
