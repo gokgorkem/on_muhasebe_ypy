@@ -142,10 +142,12 @@ class _YeniHesapBankalarBodyState extends State<YeniHesapBankalarBody> {
             ),
             Row(children: [
               TextButton(
-                  onPressed: _onPressedIptal(), child: Text("İptal")),
+                  onPressed: () => Navigator.of(context).pushNamed(BANKALAR_HESAPLAR_PAGE_ROUTE), child: Text("İptal")),
               SizedBox(width: 10),
               TextButton(
-                  onPressed: _onPressedKaydet(), child: Text("Kaydet")),
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(BANKALAR_HESAPLAR_PAGE_ROUTE);
+                  }, child: Text("Kaydet")),
             ],)
           ],
         ),
@@ -153,7 +155,4 @@ class _YeniHesapBankalarBodyState extends State<YeniHesapBankalarBody> {
     );
   }
 
-  _onPressedIptal() {Navigator.of(context).pushNamed(BANKALAR_HESAPLAR_PAGE_ROUTE);}
-
-  _onPressedKaydet() {Navigator.of(context).pushNamed(BANKALAR_HESAPLAR_PAGE_ROUTE);}
 }
