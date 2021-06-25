@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:on_muhasebe/core/utils/constants.dart';
 import 'package:on_muhasebe/core/utils/theme.dart';
 import 'package:searchfield/searchfield.dart';
 
@@ -90,16 +91,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
           hintText: "Arama",
           border: InputBorder.none,
         ),
-        suggestions: [
-          'United States',
-          'America',
-          'Washington',
-          'India',
-          'Paris',
-          'Jakarta',
-          'Australia',
-          'Lorem Ipsum'
-        ],
+        suggestions: ["ali", "veli", "ahmet"],
         onTap: (x) => buildShowDialog(context),
       ),
     );
@@ -131,10 +123,12 @@ class _CustomAppBarState extends State<CustomAppBar> {
                         child: Column(
                           children: [
                             IconButton(
-                                onPressed: () => null,
+                                onPressed: () => Navigator.of(context)
+                                    .pushNamed(
+                                        SATISLAR_YENI_MUSTERI_PAGE_ROUTE),
                                 icon: Icon(
                                     Icons.supervised_user_circle_outlined)),
-                            Text("Tedarikciler"),
+                            Text("Yeni Müşteri"),
                           ],
                         ),
                       ),
@@ -142,9 +136,10 @@ class _CustomAppBarState extends State<CustomAppBar> {
                         child: Column(
                           children: [
                             IconButton(
-                                onPressed: () => null,
+                                onPressed: () => Navigator.of(context)
+                                    .pushNamed(SATISLAR_YENI_FATURA_PAGE_ROUTE),
                                 icon: Icon(Icons.document_scanner_outlined)),
-                            Text("Faturalar"),
+                            Text("Yeni Fatura"),
                           ],
                         ),
                       ),
@@ -154,7 +149,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                             IconButton(
                                 onPressed: () => null,
                                 icon: Icon(Icons.payments_outlined)),
-                            Text("Ödemeler"),
+                            Text("Yeni Tahsilat"),
                           ],
                         ),
                       ),
@@ -179,7 +174,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                                 onPressed: () => null,
                                 icon:
                                     Icon(Icons.supervised_user_circle_rounded)),
-                            Text("Tedarikciler"),
+                            Text("Yeni Tedarikci"),
                           ],
                         ),
                       ),
@@ -189,7 +184,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                             IconButton(
                                 onPressed: () => null,
                                 icon: Icon(Icons.document_scanner_rounded)),
-                            Text("Faturalar"),
+                            Text("Yeni Fatura"),
                           ],
                         ),
                       ),
@@ -199,7 +194,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                             IconButton(
                                 onPressed: () => null,
                                 icon: Icon(Icons.payments_rounded)),
-                            Text("Ödemeler"),
+                            Text("Yeni Ödeme"),
                           ],
                         ),
                       ),
