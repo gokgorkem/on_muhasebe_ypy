@@ -107,7 +107,10 @@ class _YeniTedarikciAlislarBodyState extends State<YeniTedarikciAlislarBody> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     TextButton(
-                        onPressed: _onPressedIptal(), child: Text("İptal"))
+                        onPressed: _onPressedIptal(), child: Text("İptal")),
+                    SizedBox(width: 10),
+                    TextButton(
+                        onPressed: _onPressedKaydet(), child: Text("Kaydet")),
                   ],
                 )
               ],
@@ -119,4 +122,6 @@ class _YeniTedarikciAlislarBodyState extends State<YeniTedarikciAlislarBody> {
   }
 
   _onPressedIptal() {}
+
+  _onPressedKaydet() {}
 }
