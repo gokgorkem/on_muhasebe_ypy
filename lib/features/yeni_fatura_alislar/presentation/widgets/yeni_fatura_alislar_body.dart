@@ -166,6 +166,13 @@ class _YeniFaturaAlislarBodyState extends State<YeniFaturaAlislarBody> {
                 ),
               ],
             ),
+            SizedBox(
+              height: 10,
+            ),
+            Row(children: [
+              TextButton(onPressed: () => null, child: Text("iptal")),
+              SizedBox(width: 10,),
+            ],)
           ],
         ),
       ),
