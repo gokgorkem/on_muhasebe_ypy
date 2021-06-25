@@ -136,9 +136,18 @@ class _YeniHesapBankalarBodyState extends State<YeniHesapBankalarBody> {
                 ),
               ],
             ),
+            SizedBox(
+              height: 10,
+            ),
+            Row(children: [
+              TextButton(
+                  onPressed: _onPressedIptal(), child: Text("İptal")),
+              SizedBox(width: 10),],)
           ],
         ),
       ),
     );
   }
+
+  _onPressedIptal() {}
 }
