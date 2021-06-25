@@ -103,6 +103,13 @@ class _YeniTedarikciAlislarBodyState extends State<YeniTedarikciAlislarBody> {
                     ),
                   ),
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    TextButton(
+                        onPressed: _onPressedIptal(), child: Text("İptal"))
+                  ],
+                )
               ],
             ),
           ],
@@ -110,4 +117,6 @@ class _YeniTedarikciAlislarBodyState extends State<YeniTedarikciAlislarBody> {
       ),
     );
   }
+
+  _onPressedIptal() {}
 }
