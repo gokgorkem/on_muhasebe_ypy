@@ -71,7 +71,7 @@ class PageRouter {
       case BANKALAR_YENI_TRANSFER_PAGE_ROUTE:
         return MaterialPageRoute(builder: (_) => YeniTransferBankalarPage());
       default:
-        return MaterialPageRoute(builder: (_) => YeniTahsilatSatislarPage());
+        return MaterialPageRoute(builder: (_) => AnaSayfaPage());
     }
   }
 }
