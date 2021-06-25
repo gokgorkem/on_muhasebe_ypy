@@ -17,7 +17,12 @@ class _AlislarOdemeBodyState extends State<AlislarOdemeBody> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Expanded(flex: 1,child: Container(child: TextButton(child: Text("Yeni Ödeme"),onPressed: () => null,),)),
+        Expanded(flex: 1,child: Container(child: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            TextButton(child: Text("Yeni Ödeme"),onPressed: () => null,),
+          ],
+        ),)),
         Expanded(flex: 8,child: _buildListViewAlisOdeme()),
         Expanded(flex:1,child: Container())
       ],
