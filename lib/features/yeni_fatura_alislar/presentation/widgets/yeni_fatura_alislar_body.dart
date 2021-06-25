@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
+import 'package:on_muhasebe/core/utils/constants.dart';
 import 'package:on_muhasebe/core/utils/model_base.dart';
 
 class YeniFaturaAlislarBody extends StatefulWidget {
@@ -170,9 +171,11 @@ class _YeniFaturaAlislarBodyState extends State<YeniFaturaAlislarBody> {
               height: 10,
             ),
             Row(children: [
-              TextButton(onPressed: () => null, child: Text("iptal")),
+              TextButton(onPressed: () => Navigator.of(context).pushNamed(ALISLAR_FATURALAR_PAGE_ROUTE), child: Text("iptal")),
               SizedBox(width: 10,),
-              TextButton(onPressed: () => null, child: Text("Kaydet")),
+              TextButton(onPressed: () {
+                Navigator.of(context).pushNamed(ALISLAR_FATURALAR_PAGE_ROUTE);
+              }, child: Text("Kaydet")),
             ],)
           ],
         ),
