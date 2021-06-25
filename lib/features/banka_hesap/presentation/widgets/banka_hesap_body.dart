@@ -15,6 +15,26 @@ class BankaHesapBody extends StatefulWidget {
 class _BankaHesapBodyState extends State<BankaHesapBody> {
   @override
   Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Expanded(
+          flex: 1,
+          child: Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                TextButton(onPressed: () => null, child: Text("Yeni Hesap"))
+              ],
+            ),
+          ),
+        ),
+        Expanded(flex: 8, child: buildListViewBankaHesap()),
+        Expanded(flex: 1, child: Container())
+      ],
+    );
+  }
+
+  ListView buildListViewBankaHesap() {
     return ListView.separated(
       separatorBuilder: (context, index) => Divider(),
       itemCount: (widget.body == null || widget.headers == null)
