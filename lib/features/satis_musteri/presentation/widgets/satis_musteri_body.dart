@@ -15,6 +15,34 @@ class SatislarMusteriBody extends StatefulWidget {
 class _SatislarMusteriBodyState extends State<SatislarMusteriBody> {
   @override
   Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Expanded(
+            flex: 1,
+            child: Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  TextButton(
+                    onPressed: () => null,
+                    child: Text("Yeni Müşteri"),
+                  )
+                ],
+              ),
+            )),
+        Expanded(
+          flex: 8,
+          child: buildListViewSatisMusteri(),
+        ),
+        Expanded(
+          flex: 1,
+          child: Container(),
+        )
+      ],
+    );
+  }
+
+  ListView buildListViewSatisMusteri() {
     return ListView.separated(
       separatorBuilder: (context, index) => Divider(),
       itemCount: (widget.body == null || widget.headers == null)
