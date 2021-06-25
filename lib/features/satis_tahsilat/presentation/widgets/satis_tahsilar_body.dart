@@ -22,6 +22,7 @@ class _SatislarTahsilatlarBodyState extends State<SatislarTahsilatlarBody> {
             flex: 1,
             child: Container(
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   TextButton(
                       onPressed: () => null, child: Text("Yeni Tahsilat"))
