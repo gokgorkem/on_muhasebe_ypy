@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:on_muhasebe/core/utils/constants.dart';
 import 'package:on_muhasebe/core/utils/model_base.dart';
 
 class YeniHesapBankalarBody extends StatefulWidget {
@@ -152,7 +153,7 @@ class _YeniHesapBankalarBodyState extends State<YeniHesapBankalarBody> {
     );
   }
 
-  _onPressedIptal() {}
+  _onPressedIptal() {Navigator.of(context).pushNamed(BANKALAR_HESAPLAR_PAGE_ROUTE);}
 
-  _onPressedKaydet() {}
+  _onPressedKaydet() {Navigator.of(context).pushNamed(BANKALAR_HESAPLAR_PAGE_ROUTE);}
 }
