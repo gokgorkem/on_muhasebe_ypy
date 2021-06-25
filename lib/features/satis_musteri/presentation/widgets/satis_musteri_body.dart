@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
+import 'package:on_muhasebe/core/utils/constants.dart';
 import 'package:on_muhasebe/core/utils/entities_model_repositories.dart';
 import 'package:on_muhasebe/core/utils/theme.dart';
 
@@ -24,7 +25,8 @@ class _SatislarMusteriBodyState extends State<SatislarMusteriBody> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   TextButton(
-                    onPressed: () => null,
+                    onPressed: () => Navigator.of(context)
+                        .pushNamed(SATISLAR_YENI_MUSTERI_PAGE_ROUTE),
                     child: Text("Yeni Müşteri"),
                   )
                 ],
