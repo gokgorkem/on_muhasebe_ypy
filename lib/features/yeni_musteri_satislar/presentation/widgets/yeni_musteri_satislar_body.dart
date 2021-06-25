@@ -113,17 +113,21 @@ class _YeniMusteriSatislarBodyState extends State<YeniMusteriSatislarBody> {
             SizedBox(height: 10),
             Row(
               children: [
-                TextButton(
-                    onPressed: () => Navigator.of(context)
-                        .pushNamed(SATISLAR_MUSTERILER_PAGE_ROUTE),
-                    child: Text("İptal")),
+                Expanded(
+                  child: TextButton(
+                      onPressed: () => Navigator.of(context)
+                          .pushNamed(SATISLAR_MUSTERILER_PAGE_ROUTE),
+                      child: Text("İptal")),
+                ),
                 SizedBox(width: 10),
-                TextButton(
-                    onPressed: () {
-                      Navigator.of(context)
-                          .pushNamed(SATISLAR_MUSTERILER_PAGE_ROUTE);
-                    },
-                    child: Text("Kaydet")),
+                Expanded(
+                  child: TextButton(
+                      onPressed: () {
+                        Navigator.of(context)
+                            .pushNamed(SATISLAR_MUSTERILER_PAGE_ROUTE);
+                      },
+                      child: Text("Kaydet")),
+                ),
               ],
             )
           ],
