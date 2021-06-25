@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
+import 'package:on_muhasebe/core/utils/constants.dart';
 import 'package:on_muhasebe/core/utils/entities_model_repositories.dart';
 import 'package:on_muhasebe/core/utils/theme.dart';
 
@@ -20,7 +21,7 @@ class _AlislarOdemeBodyState extends State<AlislarOdemeBody> {
         Expanded(flex: 1,child: Container(child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            TextButton(child: Text("Yeni Ödeme"),onPressed: () => null,),
+            TextButton(child: Text("Yeni Ödeme"),onPressed: () => Navigator.of(context).pushNamed(ALISLAR_YENI_ODEME_PAGE_ROUTE),),
           ],
         ),)),
         Expanded(flex: 8,child: _buildListViewAlisOdeme()),
