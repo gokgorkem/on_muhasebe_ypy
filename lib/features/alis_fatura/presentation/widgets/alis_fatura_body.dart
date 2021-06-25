@@ -15,39 +15,54 @@ class AlislarFaturalarBody extends StatefulWidget {
 class _AlislarFaturalarBodyState extends State<AlislarFaturalarBody> {
   @override
   Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Expanded(flex: 1,child: Container(child: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            TextButton(child: Text("Yeni Fatura"),onPressed: () => null,),
+          ],
+        ),)),
+        Expanded(flex: 8,child: _buildListViewAlisFatura()),
+        Expanded(flex: 1,child: Container())
+      ],
+    );
+  }
+
+  ListView _buildListViewAlisFatura() {
     return ListView.separated(
-      separatorBuilder: (context, index) => Divider(),
-      itemCount: (widget.body == null || widget.headers == null)
-          ? 1
-          : widget.body.length + 1,
-      itemBuilder: (BuildContext context, int index) {
-        if (index == 0) {
-          return Container(
-            padding: EdgeInsets.all(10),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: CustomColor.logoBlue),
-            child: new Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: _buildHeaders(),
-            ),
-          );
-        }
-        index -= 1;
+    separatorBuilder: (context, index) => Divider(),
+    itemCount: (widget.body == null || widget.headers == null)
+        ? 1
+        : widget.body.length + 1,
+    itemBuilder: (BuildContext context, int index) {
+      if (index == 0) {
         return Container(
           padding: EdgeInsets.all(10),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: index % 2 == 0
-                  ? Colors.blue.shade700
-                  : CustomColor.statusBarColor),
-          child: Row(
+              color: CustomColor.logoBlue),
+          child: new Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: _buildBody(index),
+            children: _buildHeaders(),
           ),
         );
-      },
-    );
+      }
+      index -= 1;
+      return Container(
+        padding: EdgeInsets.all(10),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: index % 2 == 0
+                ? Colors.blue.shade700
+                : CustomColor.statusBarColor),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: _buildBody(index),
+        ),
+      );
+    },
+  );
   }
 
   List<Widget> _buildHeaders() {
