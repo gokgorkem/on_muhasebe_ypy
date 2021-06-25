@@ -163,6 +163,12 @@ class _YeniTransferBankalarBodyState extends State<YeniTransferBankalarBody> {
                 ),
               ],
             ),
+            SizedBox(height: 10,),
+            Row(children: [
+              TextButton(onPressed: () => null, child: Text("iptal")),
+              SizedBox(width: 10,),
+
+            ],)
           ],
         ),
       ),
