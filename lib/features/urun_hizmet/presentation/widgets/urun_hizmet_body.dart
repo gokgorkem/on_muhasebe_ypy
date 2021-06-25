@@ -18,7 +18,7 @@ class _UrunHizmetBodyState extends State<UrunHizmetBody> {
     return Column(
       children: [
         Expanded(flex: 1,child: Container(child: Row(mainAxisAlignment: MainAxisAlignment.end,children: [
-          Expanded(child: TextButton(onPressed: () => null,child: Text("Yeni Ürun/Hizmet"),))
+          TextButton(onPressed: () => null,child: Text("Yeni Ürün/Hizmet"),)
         ],),)),
         Expanded(flex: 8,child: _buildListViewUrunHizmet()),
         Expanded(flex: 1,child: Container())
