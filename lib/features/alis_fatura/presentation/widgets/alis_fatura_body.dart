@@ -1,5 +1,7 @@
 import 'package:equatable/equatable.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:on_muhasebe/core/utils/constants.dart';
 import 'package:on_muhasebe/core/utils/entities_model_repositories.dart';
 import 'package:on_muhasebe/core/utils/theme.dart';
 
@@ -20,7 +22,7 @@ class _AlislarFaturalarBodyState extends State<AlislarFaturalarBody> {
         Expanded(flex: 1,child: Container(child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            TextButton(child: Text("Yeni Fatura"),onPressed: () => null,),
+            TextButton(child: Text("Yeni Fatura"),onPressed: () => Navigator.of(context).pushNamed(ALISLAR_YENI_FATURA_PAGE_ROUTE),),
           ],
         ),)),
         Expanded(flex: 8,child: _buildListViewAlisFatura()),
