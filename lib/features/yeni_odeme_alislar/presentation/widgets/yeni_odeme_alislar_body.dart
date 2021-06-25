@@ -182,10 +182,19 @@ class _YeniOdemeAlislarBodyState extends State<YeniOdemeAlislarBody> {
                   ),
                 ),
               ],
-            )
+            ),
+            SizedBox(
+              height: 10,
+            ),Row(children: [
+              TextButton(
+                  onPressed: _onPressedIptal(), child: Text("İptal")),
+              
+            ],)
           ],
         ),
       ),
     );
   }
+
+  _onPressedIptal() {}
 }
