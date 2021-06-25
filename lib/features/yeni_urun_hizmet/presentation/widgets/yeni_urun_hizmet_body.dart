@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:on_muhasebe/core/utils/constants.dart';
 import 'package:on_muhasebe/core/utils/model_base.dart';
 
 class YeniUrunHizmetBody extends StatefulWidget {
@@ -161,7 +162,10 @@ class _YeniUrunHizmetBodyState extends State<YeniUrunHizmetBody> {
     );
   }
 
-  _onPressedIptal() {}
+  _onPressedIptal() {
+    Navigator.of(context).pushNamed(URUN_HIZMET_PAGE_ROUTE);
+  }
 
-  _onPressedKaydet() {}
+  _onPressedKaydet() {
+    Navigator.of(context).pushNamed(URUN_HIZMET_PAGE_ROUTE);}
 }
