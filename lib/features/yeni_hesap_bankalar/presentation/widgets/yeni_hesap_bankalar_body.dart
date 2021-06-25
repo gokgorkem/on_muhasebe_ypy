@@ -142,7 +142,10 @@ class _YeniHesapBankalarBodyState extends State<YeniHesapBankalarBody> {
             Row(children: [
               TextButton(
                   onPressed: _onPressedIptal(), child: Text("İptal")),
-              SizedBox(width: 10),],)
+              SizedBox(width: 10),
+              TextButton(
+                  onPressed: _onPressedKaydet(), child: Text("Kaydet")),
+            ],)
           ],
         ),
       ),
@@ -150,4 +153,6 @@ class _YeniHesapBankalarBodyState extends State<YeniHesapBankalarBody> {
   }
 
   _onPressedIptal() {}
+
+  _onPressedKaydet() {}
 }
