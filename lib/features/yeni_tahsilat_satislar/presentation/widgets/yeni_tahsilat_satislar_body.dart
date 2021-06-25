@@ -176,9 +176,17 @@ class _YeniTahsilatSatislarBodyState extends State<YeniTahsilatSatislarBody> {
                 ),
               ),
             ],
+          ),
+          SizedBox(height: 10),
+          Row(
+            children: [
+              TextButton(onPressed: _onPressedIptal(), child: Text("İptal")),
+            ],
           )
         ],
       ),
     );
   }
+
+  _onPressedIptal() {}
 }
