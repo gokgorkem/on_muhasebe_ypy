@@ -1,1 +1,7 @@
 # on_muhasebe_ypy
+
+GÖRKEM GÖK
+ENGİN ÇAĞLAR 
+
+YAZILIM PROJE YÖNETİMİ DERSİ
+PROJE KOD TAKİBİ
