@@ -108,10 +108,18 @@ class _YeniMusteriSatislarBodyState extends State<YeniMusteriSatislarBody> {
                   ),
                 ),
               ],
+            ),
+            SizedBox(height: 10),
+            Row(
+              children: [
+                TextButton(onPressed: _onPressedIptal(), child: Text("İptal")),
+              ],
             )
           ],
         ),
       ),
     );
   }
+
+  _onPressedIptal() {}
 }
